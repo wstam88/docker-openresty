@@ -6,7 +6,7 @@ MAINTAINER Wesley Stam <wstam88@gmail.com>
 ARG RESTY_VERSION="1.11.2.1"
 ARG RESTY_LUAROCKS_VERSION="2.3.0"
 ARG RESTY_OPENSSL_VERSION="1.1.0"
-ARG RESTY_PCRE_VERSION="8.38"
+ARG RESTY_PCRE_VERSION="10.22"
 ARG RESTY_J="1"
 ARG RESTY_CONFIG_OPTIONS="\
     --with-file-aio \
@@ -88,7 +88,6 @@ RUN \
     && ./configure \
         --prefix=/usr/local/openresty/luajit \
         --with-lua=/usr/local/openresty/luajit \
-        --lua-suffix=jit-2.1.0-alpha \
         --with-lua-include=/usr/local/openresty/luajit/include/luajit-2.1 \
     && make build \
     && make install \
